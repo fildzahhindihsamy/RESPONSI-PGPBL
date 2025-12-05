@@ -1,7 +1,7 @@
-import React from 'react';
-import { StyleSheet, View, Text, ScrollView, Linking, TouchableOpacity } from 'react-native';
 import { ThemedText } from '@/components/themed-text';
 import { FontAwesome5 } from '@expo/vector-icons';
+import React from 'react';
+import { Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const InfoSection = ({ title, children }) => (
     <View style={styles.section}>
