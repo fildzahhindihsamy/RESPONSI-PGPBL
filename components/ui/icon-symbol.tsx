@@ -24,6 +24,8 @@ const MAPPING = {
   'lokasi': 'list',
   'map.fill': 'map-marked-alt',
 'gmap.fill': 'map-pin',
+'train': 'train',
+'info': 'info-circle',
 } as IconMapping;
 
 /**

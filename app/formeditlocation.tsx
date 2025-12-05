@@ -3,7 +3,7 @@ import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import * as Location from 'expo-location';
-import { initializeApp } from "firebase/app";
+import { db } from '@/config/firebaseConfig';
 import { getDatabase, ref, update } from "firebase/database";
 
 
@@ -32,20 +32,7 @@ const App = () => {
         setAccuration(accuracy + ' m');
     };
 
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-        apiKey: "AIzaSyBOVT_iCy4XjqMgyVdxE5YNiHSDZJJmYh0",
-        authDomain: "reacnative-6e58d.firebaseapp.com",
-        databaseURL: "https://reacnative-6e58d-default-rtdb.firebaseio.com",
-        projectId: "reacnative-6e58d",
-        storageBucket: "reacnative-6e58d.firebasestorage.app",
-        messagingSenderId: "571914017319",
-        appId: "1:571914017319:web:28f1107088f147d8b94c02"
-    };
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
 
     // Alert success update
     const createOneButtonAlert = (callback) =>
